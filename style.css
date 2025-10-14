@@ -1,5 +1,94 @@
+
+/* Reset základních stylů */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Základní nastavení stránky */
 body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: #6F9391;
+  line-height: 1.6;
+}
 
-background-color: #6F9391;
+/* Obecný styl pro oba kontejnery */
+.container {
+  border-radius: 5px;
+  margin: 30px 60px;
+  padding: 40px;
+}
 
+/* První kontejner */
+.container-1 {
+  background-color: #97B0AA;
+  color: #fff;
+}
+
+/* Druhý kontejner */
+.container-2 {
+  background-color: #F8EFDE;
+  color: #333;
+}
+
+/* Horní lišta s logem a menu */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Menu */
+.menu ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.menu a:hover {
+  opacity: 0.7;
+}
+
+/* Obsah kontejnerů */
+.content h1, .content h2 {
+  margin-bottom: 15px;
+}
+
+.content p {
+  max-width: 700px;
+}
+
+/* Responsivita (mobilní verze) */
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 25px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
 }
