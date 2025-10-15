@@ -10,9 +10,13 @@
 <body>
 
   <!-- První kontejner -->
-  <section class="container container-1">
+ <section class="container container-1">
   <div class="top-bar">
-    <div class="logo">LOGO</div>
+    <!-- ✅ Nahrazeno obrázkem -->
+    <div class="logo">
+      <img src="images/logo.jpg" alt="Logo">
+    </div>
+
     <nav class="menu">
       <ul>
         <li><a href="#">O mně</a></li>
@@ -25,36 +29,37 @@
 
   <!-- Textový obsah -->
   <div class="hero-text">
-    <h1>Tvořím digitální zážitky, které propojují estetiku a funkčnost</h1>
-    <br>
-    <h2>Kombinuji UX/UI design, Motion Design a vizuální storytelling</h2>
-    <br>
-    <h3>Od konceptu k dokonalému zážitku</h3>
+    <h1>Tvořím digitální zážitky, které propojují estetiku a funkčnost.</h1>
+    <h2>Kombinuji UX/UI design, Motion Design a vizuální storytelling.</h2>
+    <h3>Od konceptu k dokonalému zážitku...</h3>
 
     <button class="cta-btn">Navštívit portfolio</button>
 
     <p class="subtext">
       Pomáhám značkám i jednotlivcům vyprávět jejich příběh prostřednictvím funkčního designu.
     </p>
-    <p class="subtext-2">Od prvního wireframu až po finální animaci</p>
+    <p class="subtext-2">Od prvního wireframu až po finální animaci.</p>
   </div>
 
   <!-- Pravá část s vizuály -->
   <div class="visuals">
-    <div class="photo"></div>
-    <div class="video-1"></div>
+    <!-- ✅ Nahrazeno skutečným obrázkem -->
+    <img class="photo" src="images/profilovka.jpg" alt="Profilová fotografie">
+
+    <!-- ✅ První video jako obdélník -->
+   <div class="video-1">
+  <video autoplay muted loop playsinline>
+    <source src="phasovec_res.mp4" type="video/mp4">
+    Tvůj prohlížeč nepodporuje přehrávání videa.
+  </video>
+</div>
+
     <div class="icon"></div>
     <div class="video-2"></div>
   </div>
 </section>
 
-  <!-- Druhý kontejner -->
-  <section class="container container-2">
-    <div class="content">
-      <h2>Ukázky dalších webů</h2>
-      <p>Tato sekce bude doplněna později.</p>
-    </div>
-  </section>
+<section class="container container-2"></section>
 
 </body>
 </html>

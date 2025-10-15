@@ -4,53 +4,62 @@
   box-sizing: border-box;
 }
 
-/* Základní nastavení stránky */
+/* === Základní nastavení stránky === */
 body {
   font-family: 'Inter', Arial, sans-serif;
-  background-color: #6F9391;
+  background-color: #6F8593;
   line-height: 1.6;
 }
 
-/* Obecný styl pro oba kontejnery */
+/* === Obecný styl pro oba kontejnery === */
 .container {
   border-radius: 5px;
   margin: 30px 60px;
   padding: 40px;
 }
 
-/* První kontejner */
+/* === První kontejner === */
 .container-1 {
   position: relative;
-  background-color: #97B0AA;
-  color: #324040;
+  background-color: #97AAB0;
+  color: #97AAB0;
   border-radius: 5px;
   margin: 30px 60px;
-  padding: 0; /* Přesné pozicování prvků uvnitř */
+  padding: 0; /* přesné pozicování prvků uvnitř */
   min-height: 1300px;
 }
 
-/* Druhý kontejner */
+/* === Druhý kontejner === */
 .container-2 {
   background-color: #F8EFDE;
   color: #333;
 }
 
-/* Horní lišta s logem a menu */
+/* === Horní lišta s logem a menu === */
 .top-bar {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
 }
 
-/* Logo */
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 1px;
+/* Logo (obrázek místo textu) */
+.logo img {
+  position: absolute;
+  top: 35px;
+  left: 88px;
+  width: auto;
+  height: 60px;
+  object-fit: contain;
 }
 
-/* Menu */
+/* Menu s přesným umístěním */
+.menu {
+  position: absolute;
+  top: 35px;
+  right: 63px;
+}
+
 .menu ul {
   display: flex;
   gap: 25px;
@@ -58,9 +67,9 @@ body {
 }
 
 .menu a {
-  color: #324040; /* změna barvy menu podle nového designu */
+  color: #324040;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 900;
   transition: opacity 0.3s ease;
 }
 
@@ -68,49 +77,53 @@ body {
   opacity: 0.7;
 }
 
-/* --- Obsah první sekce --- */
+/* === Texty v první sekci === */
 .hero-text h1 {
   position: absolute;
-  top: 180px;
+  top: 210px;
   left: 86px;
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 36px;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 34px;
   color: #324040;
   max-width: 700px;
+  line-height: 1.6;
 }
 
 .hero-text h2 {
   position: absolute;
-  top: 285px;
+  top: 330px; /* větší mezera oproti h1 */
   left: 86px;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 28px;
   color: #324040;
   max-width: 700px;
+  line-height: 1.6;
 }
 
 .hero-text h3 {
   position: absolute;
-  top: 373px;
+  top: 420px; /* větší mezera oproti h2 */
   left: 86px;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 30px;
   color: #324040;
+  line-height: 1.6;
 }
 
-/* CTA tlačítko */
+/* === CTA tlačítko === */
 .cta-btn {
   position: absolute;
-  top: 515px;
+  top: 540px;
   left: 86px;
   background-color: #4A364F;
   color: #F8EFDE;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 22px;
   padding: 14px 32px;
   border: none;
   border-radius: 10px;
@@ -123,7 +136,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Další texty */
+/* === Další texty === */
 .subtext {
   position: absolute;
   top: 691px;
@@ -145,14 +158,14 @@ body {
   color: #324040;
 }
 
-/* Pravá část (foto, videa, ikonka) */
+/* === Pravá část (foto, videa, ikonka) === */
 .visuals .photo {
   position: absolute;
   right: 123px;
-  top: 588px;
-  width: 320px;
-  height: 440px;
-  background-color: #ccc;
+  top: 111px;
+  width: 376px;
+  height: 477px;
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -161,9 +174,9 @@ body {
 .visuals .video-1 {
   position: absolute;
   right: 433px;
-  top: 662px;
-  width: 276px;
-  height: 440px;
+  top: 406px;
+  width: 267px;
+  height: 155px;
   background-color: #F8EFDE;
   border-radius: 10px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -191,7 +204,7 @@ body {
 .visuals .video-2 {
   position: absolute;
   right: 97px;
-  top: 911px;
+  top: 628px;
   width: 720px;
   height: 280px;
   border-radius: 10px;
@@ -199,7 +212,7 @@ body {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* Obsah kontejnerů (zůstává původní) */
+/* === Obecný obsah kontejnerů (zůstává) === */
 .content h1, .content h2 {
   margin-bottom: 15px;
 }
@@ -208,7 +221,7 @@ body {
   max-width: 700px;
 }
 
-/* --- Responsivita --- */
+/* === Responsivita === */
 @media (max-width: 768px) {
   .container {
     margin: 20px;
