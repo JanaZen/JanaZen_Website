@@ -179,7 +179,16 @@ body {
   height: 155px;
   background-color: #F8EFDE;
   border-radius: 10px;
+  overflow: hidden; /* ✅ skryje vše mimo zaoblený rámeček */
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ✅ Přidáno – video se přizpůsobí obalu */
+.visuals .video-1 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* přizpůsobí video bez deformace */
+  display: block;
 }
 
 /* Ikonka */
