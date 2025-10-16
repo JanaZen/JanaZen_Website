@@ -942,7 +942,7 @@ body {
   border-radius: 5px;
   margin: 30px auto; /* centrování */
   padding: 40px;
-  max-width: 550px; /* ✅ maximální šířka pro oba kontejnery */
+  max-width: 460px; /* ✅ maximální šířka pro oba kontejnery */
   width: 100%;
 }
 
@@ -1172,7 +1172,8 @@ body {
   border-radius: 5px;
   margin: 30px auto; /* centrování */
   padding: 40px;
-  max-width: 350px; /* ✅ maximální šířka pro oba kontejnery */
+  max-width: 400px;
+/* ✅ maximální šířka pro oba kontejnery */
   width: 100%;
 }
 
@@ -1207,8 +1208,8 @@ body {
   content: "";
   position: absolute;
   bottom: 0; /* ✅ umístí čáru přímo pod logem a menu */
-  left: 85px;
-  right: 60px;
+  left: 40px;
+  right: 40px;
   height: 2px;
   background-color: #324040;
   opacity: 0.6;
@@ -1220,7 +1221,7 @@ body {
   top: 35px;
   left: 50px;
   width: auto;
-  height: 40px;
+  height: 35px;
   object-fit: contain;
 }
 
@@ -1251,12 +1252,12 @@ body {
 /* === Texty v první sekci === */
 .hero-text h1 {
   position: absolute;
-  top: 175px;
-  left: 86px;
+  top: 120px;
+  left: 50px;
   font-family: 'Inter', sans-serif;
   font-style: italic;
   font-weight: 800;
-  font-size: 34px;
+  font-size: 21px;
   color: #324040;
   max-width: 700px;
   line-height: 1.2;
@@ -1264,11 +1265,11 @@ body {
 
 .hero-text h2 {
   position: absolute;
-  top: 285px;
-  left: 86px;
+  top: 185px;
+  left: 50px;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 26px;
+  font-size: 16px;
   color: #324040;
   max-width: 700px;
   line-height: 1.2;
@@ -1276,11 +1277,11 @@ body {
 
 .hero-text h3 {
   position: absolute;
-  top: 365px;
-  left: 86px;
+  top: 640px;
+  left: 50px;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 18px;
   color: #324040;
   line-height: 1.2;
 }
@@ -1288,13 +1289,13 @@ body {
 /* === CTA tlačítko === */
 .cta-btn {
   position: absolute;
-  top: 550px;
-  left: 86px;
+  top: 230px;
+  left: 92px;
   background-color: #4A364F;
   color: #F8EFDE;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 20px;
   padding: 14px 32px;
   border: none;
   border-radius: 10px;
@@ -1312,11 +1313,11 @@ body {
 /* === Další texty === */
 .subtext {
   position: absolute;
-  top: 691px;
-  left: 86px;
+  top: 820px;
+  left: 40px;
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 23px;
+  font-weight: 400;
+  font-size: 18px;
   color: #324040;
   max-width: 650px;
   line-height: 1.1;
@@ -1324,11 +1325,11 @@ body {
 
 .subtext-2 {
   position: absolute;
-  top: 852px;
-  left: 86px;
+  top: 905px;
+  left: 40px;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   color: #324040;
   line-height: 1.1;
 }
@@ -1336,10 +1337,10 @@ body {
 /* === Pravá část (foto, videa, ikonka) === */
 .visuals .photo {
   position: absolute;
-  right: 123px;
-  top: 135px;
-  width: 376px;
-  height: 477px;
+  right: 37px;
+  top: 320px;
+  width: 216px;
+  height: 274px;
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -1348,10 +1349,10 @@ body {
 /* Video (1) */
 .visuals .video-1 {
   position: absolute;
-  right: 480px;
-  top: 426px;
-  width: 267px;
-  height: 155px;
+  left: 30px;
+  top: 505px;
+  width: 170px;
+  height: 110px;
   background-color: #F8EFDE;
   border-radius: 10px;
   overflow: hidden;
@@ -1368,8 +1369,8 @@ body {
 /* Ikonka */
 .visuals .icon {
   position: absolute;
-  right: 85px;
-  top: 120px;
+  left: 75px;
+  top: 430px;
   width: 60px;
   height: 60px;
   background-color: #FF8000;
@@ -1386,10 +1387,10 @@ body {
 /* Druhé video (gradient) */
 .visuals .video-2 {
   position: absolute;
-  right: 97px;
-  top: 650px;
-  width: 720px;
-  height: 280px;
+  right: 35px;
+  top: 670px;
+  width: 328px;
+  height: 125px;
   border-radius: 10px;
   background: linear-gradient(135deg, #BA3A84, #F8EFDE);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
