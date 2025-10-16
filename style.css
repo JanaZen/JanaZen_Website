@@ -138,7 +138,7 @@ body {
   color: #F8EFDE;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 26px;
+  font-size: 30px;
   padding: 14px 32px;
   border: none;
   border-radius: 10px;
@@ -192,8 +192,8 @@ body {
 /* Video (1) */
 .visuals .video-1 {
   position: absolute;
-  right: 433px;
-  top: 406px;
+  right: 480px;
+  top: 426px;
   width: 267px;
   height: 155px;
   background-color: #F8EFDE;
