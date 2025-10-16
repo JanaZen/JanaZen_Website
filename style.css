@@ -239,67 +239,1160 @@ body {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* === Responsivita === */
-@media (max-width: 768px) {
-  .container {
-    margin: 20px;
-    padding: 25px;
-  }
 
-  .top-bar {
-    flex-direction: column;
-    gap: 15px;
-  }
 
-  .menu ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
+@media (max-width: 1500px)
 
-  .container-1 {
-    margin: 20px;
-    padding: 40px 20px;
-    min-height: auto;
-  }
+{/* === Obecný styl pro oba kontejnery === */
+.container {
+  border-radius: 5px;
+  margin: 30px auto; /* centrování */
+  padding: 40px;
+  max-width: 1200px; /* ✅ maximální šířka pro oba kontejnery */
+  width: 100%;
+}
 
-  .hero-text, .visuals {
-    position: static;
-  }
+/* === První kontejner === */
+.container-1 {
+  position: relative;
+  background: radial-gradient(circle at bottom left, #F8EBDE 0%, #97AAB0 40%, #97AAB0 100%);
+  color: #324040;
+  border-radius: 5px;
+  padding: 0;
+  min-height: 1000px;
+}
 
-  .hero-text h1,
-  .hero-text h2,
-  .hero-text h3,
-  .subtext,
-  .subtext-2 {
-    position: static;
-    margin-bottom: 20px;
-    text-align: left;
-  }
+/* === Druhý kontejner === */
+.container-2 {
+  background-color: #F8EFDE;
+  color: #333;
+  min-height: 400px;
+}
 
-  .cta-btn {
-    position: static;
-    margin: 20px 0;
-  }
+/* === Horní lišta s logem a menu === */
+.top-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px; /* trochu větší mezera pod lištou */
+  height: 100px; /* ✅ přidá výšku kontejneru podle loga a menu */
+}
 
-  .visuals {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    margin-top: 40px;
-  }
+.top-bar::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* ✅ umístí čáru přímo pod logem a menu */
+  left: 85px;
+  right: 60px;
+  height: 2px;
+  background-color: #324040;
+  opacity: 0.6;
+}
 
-  .visuals div {
-    position: static;
-    width: 90%;
-    height: auto;
-    max-width: 400px;
-    aspect-ratio: 4/3;
-  }
+/* Logo (obrázek místo textu) */
+.logo img {
+  position: absolute;
+  top: 35px;
+  left: 80px;
+  width: auto;
+  height: 40px;
+  object-fit: contain;
+}
 
-  .icon {
-    width: 40px;
-    height: 40px;
-  }
+/* Menu s přesným umístěním */
+.menu {
+  position: absolute;
+  top: 35px;
+  right: 63px;
+}
+
+.menu ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.menu a {
+  color: #324040;
+  text-decoration: none;
+  font-weight: 900;
+  transition: opacity 0.3s ease;
+}
+
+.menu a:hover {
+  opacity: 0.7;
+}
+
+/* === Texty v první sekci === */
+.hero-text h1 {
+  position: absolute;
+  top: 175px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 28px;
+  color: #324040;
+  max-width: 700px;
+  line-height: 1.2;
+}
+
+.hero-text h2 {
+  position: absolute;
+  top: 260px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #324040;
+  max-width: 700px;
+  line-height: 1.2;
+}
+
+.hero-text h3 {
+  position: absolute;
+  top: 365px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #324040;
+  line-height: 1.2;
+}
+
+/* === CTA tlačítko === */
+.cta-btn {
+  position: absolute;
+  top: 510px;
+  left: 86px;
+  background-color: #4A364F;
+  color: #F8EFDE;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+}
+
+/* === Další texty === */
+.subtext {
+  position: absolute;
+  top: 650px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  color: #324040;
+  max-width: 650px;
+  line-height: 1.1;
+}
+
+.subtext-2 {
+  position: absolute;
+  top: 790px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #324040;
+  line-height: 1.1;
+}
+
+/* === Pravá část (foto, videa, ikonka) === */
+.visuals .photo {
+  position: absolute;
+  right: 90px;
+  top: 164px;
+  width: 296px;
+  height: 397px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Video (1) */
+.visuals .video-1 {
+  position: absolute;
+  right: 320px;
+  top: 435px;
+  width: 240px;
+  height: 139px;
+  background-color: #F8EFDE;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.visuals .video-1 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ikonka */
+.visuals .icon {
+  position: absolute;
+  right: 75px;
+  top: 120px;
+  width: 60px;
+  height: 60px;
+  background-color: #FF8000;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.visuals .icon:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Druhé video (gradient) */
+.visuals .video-2 {
+  position: absolute;
+  right: 90px;
+  top: 650px;
+  width: 480px;
+  height: 191px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #BA3A84, #F8EFDE);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+}  
+    
+
+
+@media (max-width: 1280px)
+
+{/* === Obecný styl pro oba kontejnery === */
+.container {
+  border-radius: 5px;
+  margin: 30px auto; /* centrování */
+  padding: 40px;
+  max-width: 1000px; /* ✅ maximální šířka pro oba kontejnery */
+  width: 100%;
+}
+
+/* === První kontejner === */
+.container-1 {
+  position: relative;
+  background: radial-gradient(circle at bottom left, #F8EBDE 0%, #97AAB0 40%, #97AAB0 100%);
+  color: #324040;
+  border-radius: 5px;
+  padding: 0;
+  min-height: 1000px;
+}
+
+/* === Druhý kontejner === */
+.container-2 {
+  background-color: #F8EFDE;
+  color: #333;
+  min-height: 400px;
+}
+
+/* === Horní lišta s logem a menu === */
+.top-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px; /* trochu větší mezera pod lištou */
+  height: 100px; /* ✅ přidá výšku kontejneru podle loga a menu */
+}
+
+.top-bar::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* ✅ umístí čáru přímo pod logem a menu */
+  left: 85px;
+  right: 60px;
+  height: 2px;
+  background-color: #324040;
+  opacity: 0.6;
+}
+
+/* Logo (obrázek místo textu) */
+.logo img {
+  position: absolute;
+  top: 35px;
+  left: 50px;
+  width: auto;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Menu s přesným umístěním */
+.menu {
+  position: absolute;
+  top: 35px;
+  right: 63px;
+}
+
+.menu ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.menu a {
+  color: #324040;
+  text-decoration: none;
+  font-weight: 900;
+  transition: opacity 0.3s ease;
+}
+
+.menu a:hover {
+  opacity: 0.7;
+}
+
+/* === Texty v první sekci === */
+.hero-text h1 {
+  position: absolute;
+  top: 175px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 34px;
+  color: #324040;
+  max-width: 700px;
+  line-height: 1.2;
+}
+
+.hero-text h2 {
+  position: absolute;
+  top: 285px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: #324040;
+  max-width: 700px;
+  line-height: 1.2;
+}
+
+.hero-text h3 {
+  position: absolute;
+  top: 365px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #324040;
+  line-height: 1.2;
+}
+
+/* === CTA tlačítko === */
+.cta-btn {
+  position: absolute;
+  top: 550px;
+  left: 86px;
+  background-color: #4A364F;
+  color: #F8EFDE;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+}
+
+/* === Další texty === */
+.subtext {
+  position: absolute;
+  top: 691px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 23px;
+  color: #324040;
+  max-width: 650px;
+  line-height: 1.1;
+}
+
+.subtext-2 {
+  position: absolute;
+  top: 852px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #324040;
+  line-height: 1.1;
+}
+
+/* === Pravá část (foto, videa, ikonka) === */
+.visuals .photo {
+  position: absolute;
+  right: 123px;
+  top: 135px;
+  width: 376px;
+  height: 477px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Video (1) */
+.visuals .video-1 {
+  position: absolute;
+  right: 480px;
+  top: 426px;
+  width: 267px;
+  height: 155px;
+  background-color: #F8EFDE;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.visuals .video-1 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ikonka */
+.visuals .icon {
+  position: absolute;
+  right: 85px;
+  top: 120px;
+  width: 60px;
+  height: 60px;
+  background-color: #FF8000;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.visuals .icon:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Druhé video (gradient) */
+.visuals .video-2 {
+  position: absolute;
+  right: 97px;
+  top: 650px;
+  width: 720px;
+  height: 280px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #BA3A84, #F8EFDE);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+}
+
+@media (max-width: 1024px) {/* === Obecný styl pro oba kontejnery === */
+.container {
+  border-radius: 5px;
+  margin: 30px auto; /* centrování */
+  padding: 40px;
+  max-width: 750px; /* ✅ maximální šířka pro oba kontejnery */
+  width: 100%;
+}
+
+/* === První kontejner === */
+.container-1 {
+  position: relative;
+  background: radial-gradient(circle at bottom left, #F8EBDE 0%, #97AAB0 40%, #97AAB0 100%);
+  color: #324040;
+  border-radius: 5px;
+  padding: 0;
+  min-height: 1000px;
+}
+
+/* === Druhý kontejner === */
+.container-2 {
+  background-color: #F8EFDE;
+  color: #333;
+  min-height: 400px;
+}
+
+/* === Horní lišta s logem a menu === */
+.top-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px; /* trochu větší mezera pod lištou */
+  height: 100px; /* ✅ přidá výšku kontejneru podle loga a menu */
+}
+
+.top-bar::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* ✅ umístí čáru přímo pod logem a menu */
+  left: 85px;
+  right: 60px;
+  height: 2px;
+  background-color: #324040;
+  opacity: 0.6;
+}
+
+/* Logo (obrázek místo textu) */
+.logo img {
+  position: absolute;
+  top: 35px;
+  left: 50px;
+  width: auto;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Menu s přesným umístěním */
+.menu {
+  position: absolute;
+  top: 35px;
+  right: 63px;
+}
+
+.menu ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.menu a {
+  color: #324040;
+  text-decoration: none;
+  font-weight: 900;
+  transition: opacity 0.3s ease;
+}
+
+.menu a:hover {
+  opacity: 0.7;
+}
+
+/* === Texty v první sekci === */
+.hero-text h1 {
+  position: absolute;
+  top: 175px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 34px;
+  color: #324040;
+  max-width: 700px;
+  line-height: 1.2;
+}
+
+.hero-text h2 {
+  position: absolute;
+  top: 285px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: #324040;
+  max-width: 700px;
+  line-height: 1.2;
+}
+
+.hero-text h3 {
+  position: absolute;
+  top: 365px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #324040;
+  line-height: 1.2;
+}
+
+/* === CTA tlačítko === */
+.cta-btn {
+  position: absolute;
+  top: 550px;
+  left: 86px;
+  background-color: #4A364F;
+  color: #F8EFDE;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+}
+
+/* === Další texty === */
+.subtext {
+  position: absolute;
+  top: 691px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 23px;
+  color: #324040;
+  max-width: 650px;
+  line-height: 1.1;
+}
+
+.subtext-2 {
+  position: absolute;
+  top: 852px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #324040;
+  line-height: 1.1;
+}
+
+/* === Pravá část (foto, videa, ikonka) === */
+.visuals .photo {
+  position: absolute;
+  right: 123px;
+  top: 135px;
+  width: 376px;
+  height: 477px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Video (1) */
+.visuals .video-1 {
+  position: absolute;
+  right: 480px;
+  top: 426px;
+  width: 267px;
+  height: 155px;
+  background-color: #F8EFDE;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.visuals .video-1 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ikonka */
+.visuals .icon {
+  position: absolute;
+  right: 85px;
+  top: 120px;
+  width: 60px;
+  height: 60px;
+  background-color: #FF8000;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.visuals .icon:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Druhé video (gradient) */
+.visuals .video-2 {
+  position: absolute;
+  right: 97px;
+  top: 650px;
+  width: 720px;
+  height: 280px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #BA3A84, #F8EFDE);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+}
+
+@media (max-width: 768px) {/* === Obecný styl pro oba kontejnery === */
+.container {
+  border-radius: 5px;
+  margin: 30px auto; /* centrování */
+  padding: 40px;
+  max-width: 550px; /* ✅ maximální šířka pro oba kontejnery */
+  width: 100%;
+}
+
+/* === První kontejner === */
+.container-1 {
+  position: relative;
+  background: radial-gradient(circle at bottom left, #F8EBDE 0%, #97AAB0 40%, #97AAB0 100%);
+  color: #324040;
+  border-radius: 5px;
+  padding: 0;
+  min-height: 1000px;
+}
+
+/* === Druhý kontejner === */
+.container-2 {
+  background-color: #F8EFDE;
+  color: #333;
+  min-height: 400px;
+}
+
+/* === Horní lišta s logem a menu === */
+.top-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px; /* trochu větší mezera pod lištou */
+  height: 100px; /* ✅ přidá výšku kontejneru podle loga a menu */
+}
+
+.top-bar::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* ✅ umístí čáru přímo pod logem a menu */
+  left: 85px;
+  right: 60px;
+  height: 2px;
+  background-color: #324040;
+  opacity: 0.6;
+}
+
+/* Logo (obrázek místo textu) */
+.logo img {
+  position: absolute;
+  top: 35px;
+  left: 50px;
+  width: auto;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Menu s přesným umístěním */
+.menu {
+  position: absolute;
+  top: 35px;
+  right: 63px;
+}
+
+.menu ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.menu a {
+  color: #324040;
+  text-decoration: none;
+  font-weight: 900;
+  transition: opacity 0.3s ease;
+}
+
+.menu a:hover {
+  opacity: 0.7;
+}
+
+/* === Texty v první sekci === */
+.hero-text h1 {
+  position: absolute;
+  top: 175px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 34px;
+  color: #324040;
+  max-width: 700px;
+  line-height: 1.2;
+}
+
+.hero-text h2 {
+  position: absolute;
+  top: 285px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: #324040;
+  max-width: 700px;
+  line-height: 1.2;
+}
+
+.hero-text h3 {
+  position: absolute;
+  top: 365px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #324040;
+  line-height: 1.2;
+}
+
+/* === CTA tlačítko === */
+.cta-btn {
+  position: absolute;
+  top: 550px;
+  left: 86px;
+  background-color: #4A364F;
+  color: #F8EFDE;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+}
+
+/* === Další texty === */
+.subtext {
+  position: absolute;
+  top: 691px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 23px;
+  color: #324040;
+  max-width: 650px;
+  line-height: 1.1;
+}
+
+.subtext-2 {
+  position: absolute;
+  top: 852px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #324040;
+  line-height: 1.1;
+}
+
+/* === Pravá část (foto, videa, ikonka) === */
+.visuals .photo {
+  position: absolute;
+  right: 123px;
+  top: 135px;
+  width: 376px;
+  height: 477px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Video (1) */
+.visuals .video-1 {
+  position: absolute;
+  right: 480px;
+  top: 426px;
+  width: 267px;
+  height: 155px;
+  background-color: #F8EFDE;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.visuals .video-1 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ikonka */
+.visuals .icon {
+  position: absolute;
+  right: 85px;
+  top: 120px;
+  width: 60px;
+  height: 60px;
+  background-color: #FF8000;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.visuals .icon:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Druhé video (gradient) */
+.visuals .video-2 {
+  position: absolute;
+  right: 97px;
+  top: 650px;
+  width: 720px;
+  height: 280px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #BA3A84, #F8EFDE);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+}
+
+@media (max-width: 480px) {/* === Obecný styl pro oba kontejnery === */
+.container {
+  border-radius: 5px;
+  margin: 30px auto; /* centrování */
+  padding: 40px;
+  max-width: 350px; /* ✅ maximální šířka pro oba kontejnery */
+  width: 100%;
+}
+
+/* === První kontejner === */
+.container-1 {
+  position: relative;
+  background: radial-gradient(circle at bottom left, #F8EBDE 0%, #97AAB0 40%, #97AAB0 100%);
+  color: #324040;
+  border-radius: 5px;
+  padding: 0;
+  min-height: 1000px;
+}
+
+/* === Druhý kontejner === */
+.container-2 {
+  background-color: #F8EFDE;
+  color: #333;
+  min-height: 400px;
+}
+
+/* === Horní lišta s logem a menu === */
+.top-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px; /* trochu větší mezera pod lištou */
+  height: 100px; /* ✅ přidá výšku kontejneru podle loga a menu */
+}
+
+.top-bar::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* ✅ umístí čáru přímo pod logem a menu */
+  left: 85px;
+  right: 60px;
+  height: 2px;
+  background-color: #324040;
+  opacity: 0.6;
+}
+
+/* Logo (obrázek místo textu) */
+.logo img {
+  position: absolute;
+  top: 35px;
+  left: 50px;
+  width: auto;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Menu s přesným umístěním */
+.menu {
+  position: absolute;
+  top: 35px;
+  right: 63px;
+}
+
+.menu ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.menu a {
+  color: #324040;
+  text-decoration: none;
+  font-weight: 900;
+  transition: opacity 0.3s ease;
+}
+
+.menu a:hover {
+  opacity: 0.7;
+}
+
+/* === Texty v první sekci === */
+.hero-text h1 {
+  position: absolute;
+  top: 175px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 34px;
+  color: #324040;
+  max-width: 700px;
+  line-height: 1.2;
+}
+
+.hero-text h2 {
+  position: absolute;
+  top: 285px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: #324040;
+  max-width: 700px;
+  line-height: 1.2;
+}
+
+.hero-text h3 {
+  position: absolute;
+  top: 365px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: #324040;
+  line-height: 1.2;
+}
+
+/* === CTA tlačítko === */
+.cta-btn {
+  position: absolute;
+  top: 550px;
+  left: 86px;
+  background-color: #4A364F;
+  color: #F8EFDE;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+}
+
+/* === Další texty === */
+.subtext {
+  position: absolute;
+  top: 691px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 23px;
+  color: #324040;
+  max-width: 650px;
+  line-height: 1.1;
+}
+
+.subtext-2 {
+  position: absolute;
+  top: 852px;
+  left: 86px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #324040;
+  line-height: 1.1;
+}
+
+/* === Pravá část (foto, videa, ikonka) === */
+.visuals .photo {
+  position: absolute;
+  right: 123px;
+  top: 135px;
+  width: 376px;
+  height: 477px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Video (1) */
+.visuals .video-1 {
+  position: absolute;
+  right: 480px;
+  top: 426px;
+  width: 267px;
+  height: 155px;
+  background-color: #F8EFDE;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.visuals .video-1 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ikonka */
+.visuals .icon {
+  position: absolute;
+  right: 85px;
+  top: 120px;
+  width: 60px;
+  height: 60px;
+  background-color: #FF8000;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.visuals .icon:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Druhé video (gradient) */
+.visuals .video-2 {
+  position: absolute;
+  right: 97px;
+  top: 650px;
+  width: 720px;
+  height: 280px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #BA3A84, #F8EFDE);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 }
