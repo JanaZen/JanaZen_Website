@@ -95,7 +95,7 @@ body {
 /* === Texty v první sekci === */
 .hero-text h1 {
   position: absolute;
-  top: 190px;
+  top: 175px;
   left: 86px;
   font-family: 'Inter', sans-serif;
   font-style: italic;
@@ -103,36 +103,36 @@ body {
   font-size: 34px;
   color: #324040;
   max-width: 700px;
-  line-height: 1.6;
+  line-height: 1.2;
 }
 
 .hero-text h2 {
   position: absolute;
-  top: 320px;
+  top: 285px;
   left: 86px;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 26px;
   color: #324040;
   max-width: 700px;
-  line-height: 1.6;
+  line-height: 1.2;
 }
 
 .hero-text h3 {
   position: absolute;
-  top: 415px;
+  top: 365px;
   left: 86px;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 28px;
   color: #324040;
-  line-height: 1.6;
+  line-height: 1.2;
 }
 
 /* === CTA tlačítko === */
 .cta-btn {
   position: absolute;
-  top: 560px;
+  top: 550px;
   left: 86px;
   background-color: #4A364F;
   color: #F8EFDE;
@@ -163,6 +163,7 @@ body {
   font-size: 23px;
   color: #324040;
   max-width: 650px;
+  line-height: 1.1;
 }
 
 .subtext-2 {
@@ -173,6 +174,7 @@ body {
   font-weight: 700;
   font-size: 24px;
   color: #324040;
+  line-height: 1.1;
 }
 
 /* === Pravá část (foto, videa, ikonka) === */
