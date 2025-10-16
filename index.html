@@ -10,56 +10,62 @@
 <body>
 
   <!-- První kontejner -->
- <section class="container container-1">
-  <div class="top-bar">
-    <!-- ✅ Nahrazeno obrázkem -->
-    <div class="logo">
-      <img src="images/logo.jpg" alt="Logo">
+ <!-- První kontejner -->
+  <section class="container container-1">
+    <div class="top-bar">
+      <!-- ✅ Logo jako obrázek -->
+      <div class="logo">
+        <img src="images/logo.jpg" alt="Logo">
+      </div>
+
+      <nav class="menu">
+        <ul>
+          <li><a href="#">O mně</a></li>
+          <li><a href="#">Služby</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
     </div>
 
-    <nav class="menu">
-      <ul>
-        <li><a href="#">O mně</a></li>
-        <li><a href="#">Služby</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Kontakt</a></li>
-      </ul>
-    </nav>
-  </div>
+    <!-- Textový obsah -->
+    <div class="hero-text">
+      <h1>Tvořím digitální zážitky, které<br>
+        propojují estetiku a funkčnost.</h1>
+      <h2>Kombinuji UX/UI design, Motion Design<br>
+      a vizuální storytelling.</h2>
+      <h3>Od konceptu k dokonalému<br>
+        zážitku...</h3>
 
-  <!-- Textový obsah -->
-  <div class="hero-text">
-    <h1>Tvořím digitální zážitky, které propojují estetiku a funkčnost.</h1>
-    <h2>Kombinuji UX/UI design, Motion Design a vizuální storytelling.</h2>
-    <h3>Od konceptu k dokonalému zážitku...</h3>
+      <a href="https://jana-zen-portfolio.vercel.app/" target="_blank" class="cta-btn">
+       Navštívit portfolio
+      </a>
 
-    <button class="cta-btn">Navštívit portfolio</button>
+      <p class="subtext">
+        Pomáhám značkám i jednotlivcům vyprávět<br>
+        jejich příběh prostřednictvím<br>
+        funkčního designu.
+      </p>
+      <p class="subtext-2">Od prvního wireframu až <br>
+        po finální animaci.</p>
+    </div>
 
-    <p class="subtext">
-      Pomáhám značkám i jednotlivcům vyprávět jejich příběh prostřednictvím funkčního designu.
-    </p>
-    <p class="subtext-2">Od prvního wireframu až po finální animaci.</p>
-  </div>
+    <!-- Pravá část s vizuály -->
+    <div class="visuals">
+      <img class="photo" src="images/profilovka.jpg" alt="Profilová fotografie">
 
-  <!-- Pravá část s vizuály -->
-  <div class="visuals">
-    <!-- ✅ Nahrazeno skutečným obrázkem -->
-    <img class="photo" src="images/profilovka.jpg" alt="Profilová fotografie">
+      <div class="video-1">
+        <video autoplay muted loop playsinline>
+          <source src="phasovec_res.mp4" type="video/mp4">
+          Tvůj prohlížeč nepodporuje přehrávání videa.
+        </video>
+      </div>
 
-    <!-- ✅ První video jako obdélník -->
-   <div class="video-1">
-  <video autoplay muted loop playsinline>
-    <source src="phasovec_res.mp4" type="video/mp4">
-    Tvůj prohlížeč nepodporuje přehrávání videa.
-  </video>
-</div>
+      <div class="icon"></div>
+      <div class="video-2"></div>
+    </div>
+  </section>
 
-    <div class="icon"></div>
-    <div class="video-2"></div>
-  </div>
-</section>
-
-<section class="container container-2"></section>
-
+  <section class="container container-2"></section>
 </body>
 </html>
