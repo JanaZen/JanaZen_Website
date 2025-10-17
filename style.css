@@ -1343,7 +1343,6 @@ body {
     font-weight: 700;
   }
 
-
 /* === Texty v první sekci === */
 .hero-text h1 {
   position: absolute;
@@ -1445,9 +1444,9 @@ body {
 .visuals .video-1 {
   position: absolute;
   left: 30px;
-  top: 505px;
+  top: 525px;
   width: 170px;
-  height: 110px;
+  height: 90px;
   background-color: #F8EFDE;
   border-radius: 10px;
   overflow: hidden;
