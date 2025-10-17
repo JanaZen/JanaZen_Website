@@ -1319,11 +1319,11 @@ body {
 .hero-text h1 {
   position: absolute;
   top: 120px;
-  left: 50px;
+  left: 40px;
   font-family: 'Inter', sans-serif;
   font-style: italic;
   font-weight: 800;
-  font-size: 21px;
+  font-size: 19px;
   color: #324040;
   max-width: 700px;
   line-height: 1.2;
@@ -1331,8 +1331,8 @@ body {
 
 .hero-text h2 {
   position: absolute;
-  top: 185px;
-  left: 50px;
+  top: 180px;
+  left: 30px;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -1344,7 +1344,7 @@ body {
 .hero-text h3 {
   position: absolute;
   top: 640px;
-  left: 50px;
+  left: 30px;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -1356,7 +1356,7 @@ body {
 .cta-btn {
   position: absolute;
   top: 230px;
-  left: 92px;
+  left: 67px;
   background-color: #4A364F;
   color: #F8EFDE;
   font-family: 'Inter', sans-serif;
@@ -1380,7 +1380,7 @@ body {
 .subtext {
   position: absolute;
   top: 820px;
-  left: 40px;
+  left: 75px;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -1392,7 +1392,7 @@ body {
 .subtext-2 {
   position: absolute;
   top: 905px;
-  left: 40px;
+  left: 75px;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -1453,7 +1453,7 @@ body {
 /* Druhé video (gradient) */
 .visuals .video-2 {
   position: absolute;
-  right: 35px;
+  right: 22px;
   top: 670px;
   width: 328px;
   height: 125px;
