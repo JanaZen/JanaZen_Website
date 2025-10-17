@@ -473,69 +473,69 @@ body {
 
   /* Texty – absolute pozice jako v originálu, ale upravěné pro 768px */
   .hero-text h1 {
-    top: 175px;
-    left: 86px;
-    font-size: 24px;
+    top: 145px;
+    left: 70px;
+    font-size: 22px;
   }
 
   .hero-text h2 {
-    top: 285px;
-    left: 86px;
-    font-size: 18px;
+    top: 215px;
+    left: 80px;
+    font-size: 16px;
   }
 
   .hero-text h3 {
-    top: 365px;
-    left: 86px;
-    font-size: 20px;
+    top: 670px;
+    left: 80px;
+    font-size: 19px;
   }
 
   .cta-btn {
-    top: 550px;
-    left: 86px;
+    top: 260px;
+    left: 115px;
     font-size: 20px;
   }
 
   .subtext {
-    top: 691px;
-    left: 86px;
-    font-size: 18px;
+    top: 905px;
+    left: 30px;
+    font-size: 16px;
     font-weight: 400;
   }
 
   .subtext-2 {
-    top: 852px;
-    left: 86px;
-    font-size: 19px;
+    top: 867px;
+    left: 30px;
+    font-size: 15px;
     font-weight: 600;
   }
 
   /* Visuals – absolute pozice, upravěné pro 768px */
   .visuals .photo {
-    right: 123px;
-    top: 135px;
+    right: 30px;
+    top: 355px;
     width: 250px;
     height: 300px;
   }
 
   .visuals .video-1 {
-    right: 480px;
-    top: 426px;
+    left: 30px;
+    top: 540px;
     width: 200px;
     height: 100px;
   }
 
   .visuals .icon {
-    right: 85px;
-    top: 120px;
+    left: 155px;
+    top: 420px;
     width: 50px;
     height: 50px;
   }
 
   .visuals .video-2 {
-    right: 97px;
-    top: 650px;
-    width: 300px;
+    right: 25px;
+    top: 700px;
+    width: 410px;
     height: 150px;
   }
 }
