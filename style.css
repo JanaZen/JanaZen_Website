@@ -1172,7 +1172,7 @@ body {
   border-radius: 5px;
   margin: 30px auto; /* centrování */
   padding: 40px;
-  max-width: 350px;
+  max-width: 370px;
 /* ✅ maximální šířka pro oba kontejnery */
   width: 100%;
 }
