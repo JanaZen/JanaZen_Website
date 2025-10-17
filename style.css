@@ -1215,6 +1215,50 @@ body {
   opacity: 0.6;
 }
 
+.menu {
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    background-color: #F8EFDE;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    padding: 15px 25px;
+    z-index: 999;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu a {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .hamburger {
+    display: flex; /* zviditelnění hamburgeru na mobilech */
+  }
+
+  /* === Aktivní stav (otevřené menu) === */
+  .menu.active {
+    display: flex;
+  }
+
+  /* === Animace hamburgeru (přeměna na X) === */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 5px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -5px);
+  }
+}
+
 /* Logo (obrázek místo textu) */
 .logo img {
   position: absolute;
@@ -1394,6 +1438,4 @@ body {
   border-radius: 10px;
   background: linear-gradient(135deg, #BA3A84, #F8EFDE);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
-
 }

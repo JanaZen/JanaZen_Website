@@ -13,20 +13,28 @@
  <!-- První kontejner -->
   <section class="container container-1">
     <div class="top-bar">
-      <!-- ✅ Logo jako obrázek -->
-      <div class="logo">
-        <img src="images/logo.jpg" alt="Logo">
-      </div>
+  <!-- ✅ Logo -->
+  <div class="logo">
+    <img src="images/logo.jpg" alt="Logo">
+  </div>
 
-      <nav class="menu">
-        <ul>
-          <li><a href="#">O mně</a></li>
-          <li><a href="#">Služby</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Kontakt</a></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- ✅ Hamburger tlačítko (viditelné jen na mobilech) -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- ✅ Navigace -->
+  <nav class="menu" id="menu">
+    <ul>
+      <li><a href="#">O mně</a></li>
+      <li><a href="#">Služby</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+  </nav>
+</div>
 
     <!-- Textový obsah -->
     <div class="hero-text">
@@ -66,5 +74,16 @@
   </section>
 
   <section class="container container-2"></section>
+
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    menu.classList.toggle('active');
+  });
+</script>
+
 </body>
 </html>
